@@ -1,0 +1,167 @@
+.template-main {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+
+
+.login-signup{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.login-button{
+    background-color: rgb(9, 12, 35);
+    color: white;
+    padding: 1px 10px 3px 12px;
+    border-radius: 8px;
+    border-color: rgb(65, 71, 77);
+    font-size: medium;
+}
+.main-template{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+   margin-left: 10%;
+   margin-bottom: 2%;
+   gap: 3%;
+   
+   
+
+}
+.main-template-1{
+  display: flex;
+  flex-direction: column;
+  padding: 1% 8% 3% 8%;
+  box-shadow: 0 0 10px rgb(249, 248, 249);
+  height: max-content;
+  width: 90%;
+}
+.title{
+  background: linear-gradient( #0c04fb, #0a64d1,#9999a3, #3f3570);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  margin-bottom: 1%;
+    font-weight:bold;
+    font-size: 2rem;
+    
+}
+.description{
+ color: rgb(196, 201, 206);
+}
+
+.lines{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.hr1{
+    
+    background-color: rgb(52, 52, 52);
+    width:50%;
+    height: 1px;
+    
+}
+.or{
+    font-size: medium;
+    color: rgb(125, 126, 126);
+}
+.google-continue{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: medium;
+    background-color: rgb(29, 37, 45);
+    border-color: rgb(10, 237, 237);
+    color: azure;
+    gap: 0.7rem;
+    padding: 12px 8px;
+    margin-top: 1rem;
+}
+
+  .login-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .label{
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+ 
+  .email-id{
+    font-size:medium;
+    color:aliceblue;
+  }
+  .star{
+    color: rgb(180, 21, 21);
+  }
+  .email-input{
+    background-color: rgb(24, 23, 30);
+    border-radius: 0.5rem;
+    color: rgb(168, 179, 179);
+    width: 90%;
+    padding: 8px 12px 8px 12px;
+    margin-bottom: 1%;
+  }
+  .forget{
+  max-width: max-content;
+  padding-top: 6px;
+   padding-right: 2rem;
+  }
+  
+  .first-last{
+    display: flex;
+    height: 4.5rem;
+  }
+
+/* CSS for student account type */
+.bg-transparent-900-student {
+  background-color: rgb(29, 37, 45);
+  color: #f5f1f1; /* Replace with your desired color code for richblack-5 */
+  border-radius: 1rem;
+  padding: 0 1rem;
+}
+
+/* CSS for non-student account type */
+.bg-transparent-non-student {
+  background-color: transparent;
+  color: #817c7c; /* Replace with your desired color code for richblack-200 */
+  padding: 2px 2px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  duration: 200ms;
+}
+@media (max-width: 700px) {
+  .main-template{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+  }
+  .main-template-1{
+   margin: 5%;
+    width: max-content;
+  }.main-template{
+    
+  
+   margin-left: 0%;
+   
+ 
+   
+   
+
+}
+}

@@ -1,0 +1,76 @@
+.main-template-signup       {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(4, 1, 10);
+   
+}
+.image1{
+width: 100%;
+height: 100%;
+}
+   
+
+
+.main-template-2{
+  display: flex;
+  flex-direction: column;
+ margin: 2%;
+ padding: 1% 5%;
+ 
+  width: 100%;
+}
+.title-signup{
+    font-size: 3rem;
+  text-align: center;
+    background: linear-gradient( #0c04fb, #0a64d1,#9999a3, #3f3570);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight:bold;
+  
+}
+.student-instructor{
+    display: flex;
+    font-size: large;
+    font-weight: 600;
+    background-color:rgb(13, 17, 29);
+    gap: 1rem;
+    margin: 6px 0;
+    border-radius: 4rem;
+    width: 70%;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}
+.signup{
+    width: 100%;
+    background-color: yellow;
+    border-radius: 8px;
+    font-size: medium;
+    padding: 2.5%;
+    
+
+  }
+  @media (max-width: 700px) {
+    .main-template-signup{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2%;
+    }
+    .main-template-2{
+     margin: 5%;
+      width: max-content;
+    }
+}
+@media (max-width: 490px) {
+    .title-signup{
+        font-size: 1rem;
+    }
+    .main-template-2{
+      
+       margin: 1%;
+       padding: 0;
+       
+        width: 100%;
+      }
+}

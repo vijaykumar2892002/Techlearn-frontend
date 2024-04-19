@@ -1,0 +1,127 @@
+.container {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(1, 1, 24);  
+    border-bottom: 1px solid #00283d;
+   max-width: 2000px;
+  }
+ 
+  .content {
+    display: flex;
+    width: 92%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navList {
+    display: flex;
+    gap: 2rem;
+    font-size:large;
+    color: #d9d9d9;
+    font-weight: 500; /* Equivalent to font-bold in Tailwind CSS */
+   
+  }
+  
+  .navItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .catalogWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    group-hover: text-yellow-25;
+  }
+  
+  .navLink {
+    color: #d9d9d9;
+  }
+  
+  .activeLink {
+    color: #0a33e8;
+  }
+
+
+  /* catagories */
+
+  /* new-file.css */
+/* new-file.css */
+
+.dropdown-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 90%;
+  top: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f5f9;
+  border-radius: 6px;
+  padding: 16px;
+  color: #1e293b;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.dropdown-container:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu-arrow {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 24px;
+  width: 24px;
+  background-color: #f1f5f9;
+  border-radius: 6px;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+}
+
+.link a {
+  color: #1e293b;
+  text-decoration: none;
+}
+
+.link a:hover {
+  color: #0369a1;
+}
+
+@media (min-width: 1024px) {
+  .dropdown-menu {
+    width: 300px;
+  }
+}
+
+.AiOutlineShoppingCart{
+  font-size: x-large;
+ 
+  color: white,
+}

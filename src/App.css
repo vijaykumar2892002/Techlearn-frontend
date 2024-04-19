@@ -1,0 +1,22 @@
+/* write your css here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    overflow-x: hidden;
+}
+.custom-app {
+    width: 100%;
+    min-height: 100vh;
+   /* Change color code accordingly */
+   background-color: rgb(5, 5, 18);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif; /* Assuming Inter font is imported */
+  }
+  .navbar{
+    width: 100%;
+    background-color: rgb(1, 1, 24);  
+    border-bottom: 1px solid #00283d;
+  }
