@@ -100,14 +100,16 @@ exports.signUp = async (req, res) => {
         //encrypt the password
         const hashedPassword = await bcrypt.hash(password, 10);
         //get the most recenty  otp from otp model
+        console.log(email);
         const recentOtp = await OTP.find({ email }).sort({ createdAt: -1 }).limit(1);
-        console.log(recentOtp);
+        console.log("helo")
+        console.log(recentOtp + "dwwf");
         //validate OTP
         if (recentOtp.length === 0) {
             //OTP not found
             return res.status(400).json({
                 success: false,
-                message: 'OTP not  Found ',
+                message: 'OTP not  Found ok',
             })
         }
         //match the body otp and database otp
@@ -128,7 +130,7 @@ exports.signUp = async (req, res) => {
             gender: null,
             dateOfBirth: null,
             about: null,
-            contactNumer: null,
+            contactNumber: null,
         });
         console.log("after profil");
         //save the entry into User model
@@ -190,7 +192,7 @@ exports.login = async (req, res) => {
                 accountType: user.accountType,
             }
             const token = jwt.sign(payload, process.env.JWT_SECRET, {
-                expiresIn: "2h",
+                expiresIn: "10d",
             });
 
             //store the token into body, cookie

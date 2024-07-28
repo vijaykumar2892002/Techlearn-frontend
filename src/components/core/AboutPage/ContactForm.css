@@ -1,0 +1,70 @@
+.contactus-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 5%;
+  }
+  
+  .input-group-item {
+    flex: 1;
+    position: relative;
+    color: aliceblue;
+  }
+  
+  .label {
+    margin-bottom: 5px;
+  }
+  
+  .text-black {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .country-code {
+    width: 30%;
+  }
+  
+  .phone-number {
+    width: 70%;
+   
+  }
+  .phone-input{
+    display: flex;
+    gap: 2%;
+  }
+  
+  .message-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  span {
+    color: red;
+  }
+#dropdown{
+    color: black;
+}

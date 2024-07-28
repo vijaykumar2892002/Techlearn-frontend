@@ -5,7 +5,11 @@ const router = express.Router();
 //1.import  Course Contoller
 const { createCourse,
     showAllCourses,
-    getCourseDetails
+    editCourse,
+    getCourseDetails,
+    getFullCourseDetails,
+    getInstructorCourses,
+    deleteCourse,
 } = require("../Controllers/Course");
 //import Category controller
 const { createCategory,
@@ -24,6 +28,11 @@ const { createSubSection,
     updatesubSection,
     deleteSubSection,
 } = require("../Controllers/subSection");
+
+
+const {
+    updateCourseProgress
+  } = require("../Controllers/courseProgress");
 //import MiddleWare Controller
 
 const {auth,isStudent,isInstructor,isAdmin}=require("../Middleware/auth");
@@ -53,17 +62,25 @@ router.post("/deleteSubSection",auth,isInstructor,deleteSubSection);
 
 // Get all Registered Courses
 router.get("/getAllCourses",showAllCourses);
+router.post("/getFullCourseDetails", auth, getFullCourseDetails)
 // Get Details for a Specific Courses
 router.post("/getCourseDetails",getCourseDetails);
+// Edit Course routes
+router.post("/editCourse", auth, isInstructor, editCourse)
+// Get all Courses Under a Specific Instructor
+router.get("/getInstructorCourses", auth, isInstructor, getInstructorCourses)
+// Delete a Course
+router.delete("/deleteCourse", deleteCourse)
 
+router.post("/updateCourseProgress", auth, isStudent, updateCourseProgress);
 // ********************************************************************************************************
 //                                      Category routes (Only by Admin)
 // ********************************************************************************************************
 // Category can Only be Created by Admin
 // TODO: Put IsAdmin Middleware here
 router.post("/createCategory",auth,isAdmin,createCategory);
-router.get("/showAllCategories",auth,isAdmin,showAllCategories);
-router.get("/getCategoryPageDetails",auth,isAdmin,categoryPageDetails);
+router.get("/showAllCategories",showAllCategories);
+router.post("/getCategoryPageDetails",categoryPageDetails);
 // ********************************************************************************************************
 //                                      Rating and Review
 // ********************************************************************************************************

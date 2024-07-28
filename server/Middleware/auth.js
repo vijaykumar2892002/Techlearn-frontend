@@ -8,8 +8,8 @@ exports.auth = async (req, res, next) => {
         //extract token
         const token = req.cookies.token 
                         || req.body.token 
-                        || req.header("Authorisation").replace("Bearer ", "");
-
+                        || req.header("Authorization").replace("Bearer ", "");
+         console.log("token in auth",token)
         //if token missing, then return response
         if(!token) {
             return res.status(401).json({
@@ -20,12 +20,14 @@ exports.auth = async (req, res, next) => {
 
         //verify the token
         try{
+            console.log("before decode")
             const decode =  jwt.verify(token, process.env.JWT_SECRET);
-            console.log(decode);
+            console.log("after decode",decode);
             req.user = decode;
         }
         catch(err) {
             //verification - issue
+          
             return res.status(401).json({
                 success:false,
                 message:'token is invalid',
@@ -65,6 +67,7 @@ exports.isStudent = async (req, res, next) => {
 exports.isInstructor = async (req, res, next) => {
     try{
            if(req.user.accountType !== "Instructor") {
+            console.log("istructor",);
                return res.status(401).json({
                    success:false,
                    message:'This is a protected route for Instructor only',

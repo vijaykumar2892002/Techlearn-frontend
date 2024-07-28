@@ -1,0 +1,78 @@
+.threesteps{
+  display: flex;
+  
+}
+.add-course{
+  margin-bottom: 3.5rem; /* equivalent to mb-14 */
+  font-size: 1.875rem;  /* equivalent to text-3xl */
+  font-weight: 500;     /* equivalent to font-medium */
+  color: #333333;  
+}
+.Add-Course-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.Add-Course-main-CourseInformationForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.CourseInformationForm-main{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.steps-main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 3%;
+}
+.steps-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.step-count{
+ padding: 0.2rem 0.7rem;
+  border-radius: 100rem; /* equivalent to rounded-full */
+  border-width: 2px;   
+}
+.steps-text-main{
+  margin: 4% 1%;
+}
+.tick{
+  color: rgb(5, 218, 5);
+ 
+}
+.informationForm-main{
+  border-radius: 0.375rem; /* rounded-md */
+  border-color: #0D1117; /* richblack-700 */
+  background-color: #090C10; /* richblack-800 */
+  padding: 1.5rem; /* p-6 */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* space-y-8 */
+}
+.informationForm-main input {
+  color: #090C10;
+  padding: 1%;
+}
+.informationForm-main textarea {
+  color: #090C10;
+}
+.informationForm-main option{
+  color: #090C10;
+}
+.informationForm-main select{
+  color: #727477;
+}
+sup{
+  color: red;
+}
+.Continue-Without-Saving{
+background-color: rgb(97, 4, 12);
+padding: 2%;
+}

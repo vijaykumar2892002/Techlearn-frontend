@@ -7,7 +7,8 @@ const {updateProfile,
     deleteAccount ,
     getAllUserDetails,
     updateDisplayPicture,
-    getEnrolledCourses
+    getEnrolledCourses,
+    instructorDashboard
 }=require("../Controllers/Profile");
 const {auth,isStudent,isInstructor,isAdmin}=require("../Middleware/auth");
 // ********************************************************************************************************
@@ -21,5 +22,5 @@ router.get("/getUserDetails", auth, getAllUserDetails)
 // Get Enrolled Courses
 router.get("/getEnrolledCourses", auth, getEnrolledCourses)
 router.put("/updateDisplayPicture", auth, updateDisplayPicture)
-
+router.get("/instructorDashboard", auth, isInstructor, instructorDashboard)
 module.exports = router;

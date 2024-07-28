@@ -1,0 +1,37 @@
+.contact-main1{
+    display: flex;
+    flex-direction: column;
+}
+.contact-main{
+    display: flex;
+    justify-content: space-between;
+    margin:  0 5%;
+    gap: 1%;
+}
+.contact-form-main{
+   
+}
+.contact-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.address-icons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+    gap: 2%;
+}
+.address-text{
+    font-size:medium
+}
+.FaLocationDot{
+    color: blue;
+}
+.Lower-body{
+    display: flex;
+    justify-content: space-evenly;
+    color: blue;
+    margin-top: 7%;
+}

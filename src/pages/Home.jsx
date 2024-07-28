@@ -11,6 +11,7 @@ import TimelineSection from '../components/core/HomePage/TimelineSection';
 import ExploreMore from '../components/core/HomePage/ExploreMore'
 import Footer from '../components/common/Footer';
 import "../styles/HomePage/Home.css";
+import ReviewSlider from '../components/common/ReviewSlider'
 function Home() {
   return (
     <div>
@@ -106,6 +107,7 @@ function Home() {
       </div>
       {/*********************************Section2*******************************************/}
       <div className='section2'>
+      <div>
         <div className='AboutTeam'>
           <div className='AboutTeam-text'>
           <div className='padding'>
@@ -142,9 +144,15 @@ function Home() {
           </div>
         </div>
         <ExploreMore />
+        
+        </div>
       </div>
+      <div> <h2 className='text-center text-4xl font-semobold mt-10 text-white'>Review from Other Learners</h2>
+            {/* Review Slider here */}
+            <ReviewSlider />
+            </div>
       {/*********************************Section3*******************************************/}
-    
+     
       {/*********************************Footer*******************************************/}
       <Footer></Footer>
       

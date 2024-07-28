@@ -1,30 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import { IoIosArrowDropdownCircle } from "react-icons/io"
 import { useSelector } from 'react-redux'
 import { Link, matchPath, useLocation } from 'react-router-dom'
 import logo from "../../assets/Logo/TechLearn_transparent.png"
 import { NavbarLinks } from "../../data/navbar-links"
+import { apiConnector } from "../../services/apiConnector"
+import { categories } from "../../services/apis"
 import "../../styles/HomePage/Navbar.css"
 import ProfileDropdown from '../auth/ProfileDropDown'
-const subLinks = [
-  {
-    title: "python",
-    link: "/catalog/python"
-  },
-  {
-    title: "web dev",
-    link: "/catalog/web-development"
-  },
-];
+
 const Navbar = () => {
   const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
   const { totalItems } = useSelector((state) => state.cart)
   const location = useLocation();
-  
-  console.log("user",user)
-  console.log("token",token)
+  const [subLinks, setSubLinks] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    ; (async () => {
+      setLoading(true)
+      try {
+        const res = await apiConnector("GET", categories.CATEGORIES_API)
+        console.log(res.data.allcategory);
+        const result = res.data.allcategory
+
+        setSubLinks(result)
+
+      } catch (error) {
+        console.log("Could not fetch Categories.", error)
+      }
+      setLoading(false)
+    })()
+  }, [])
+  console.log("sublinks", subLinks)
+  console.log("user", user)
+  console.log("token", token)
   const matchRoute = (route) => {
     return matchPath({ path: route }, location.pathname);
   }
@@ -43,33 +55,42 @@ const Navbar = () => {
               <li key={index} className='navItem'>
                 {link.title === 'Catalog' ? (
                   <div className='dropdown-container'>
-  {link.title === 'Catalog' ? (
-    <>
-      <div className='dropdown-toggle'>
-        <p>{link.title}</p>
-        <IoIosArrowDropdownCircle />
-      </div>
-      <div className='dropdown-menu'>
-        <div className='dropdown-menu-arrow'></div>
-        {subLinks.length ? (
-          subLinks.map((subLink, index) => (
-            <div className='link' key={index}>
-              <Link to={`${subLink.link}`}>
-                <p>{subLink.title}</p>
-              </Link>
-            </div>
-          ))
-        ) : (
-          <div></div>
-        )}
-      </div>
-    </>
-  ) : (
-    <div className='dropdown-toggle'>
-      <p>{link.title}</p>
-    </div>
-  )}
-</div>
+                    {link.title === 'Catalog' ? (
+
+                      <>
+                        <div className='dropdown-toggle'>
+                          <p>{link.title}</p>
+                          <IoIosArrowDropdownCircle />
+                        </div>
+                        <div className='dropdown-menu'>
+                          <div className='dropdown-menu-arrow'></div>
+                          {subLinks.length ? (
+                            subLinks.map((subLink, index) => (
+                              <div className='link' key={index}>
+                                <Link
+                                  to={`/catalog/${subLink.name
+                                    .split(/[\s/]+/)
+                                    .join("-")
+                                    .toLowerCase()}`}
+                                  className="bg-transparent py-4 pl-4 hover:bg-richblack-50"
+                                  key={index}
+                                >
+                                  <p>{subLink.name}</p>
+                                </Link>
+
+                              </div>
+                            ))
+                          ) : (
+                            <div></div>
+                          )}
+                        </div>
+                      </>
+                    ) : (
+                      <div className='dropdown-toggle'>
+                        <p>{link.title}</p>
+                      </div>
+                    )}
+                  </div>
 
                 ) : (
                   <Link to={link?.path}>
@@ -86,26 +107,24 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          
+
         </nav>
         {/* Login/SignUp/Dashboard */}
-        
+
         {<div className='flex gap-x-4 items-center'>
-          
+
           {
-            
+
             user && user?.accountType != "Instructor" && (
-              
-              <Link to="/dashboard/cart" className='relative ' style={{ color: 'white', fontSize: '200%' }}>
-                <AiOutlineShoppingCart  />
-                {
-                  totalItems > 0 && (
-                    <span>
-                      {totalItems}
-                    </span>
-                  )
-                }
-              </Link>
+
+              <Link to="/dashboard/cart" className="relative">
+              <AiOutlineShoppingCart className="text-2xl text-richblack-100" />
+              {totalItems > 0 && (
+                <span className="absolute -top-3 -bottom-0 -right-2 grid h-5 w-5 place-items-center overflow-hidden rounded-full bg-richblack-800 text-center text-xs font-bold text-yellow-100">
+                  {totalItems}
+                </span>
+              )}
+            </Link>
             )
           }
           {
@@ -127,8 +146,8 @@ const Navbar = () => {
             )
           }
           {
-                token !== null && <ProfileDropdown />
-            }
+            token !== null && <ProfileDropdown />
+          }
 
         </div>}
 

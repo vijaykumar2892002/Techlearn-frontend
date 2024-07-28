@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
 .about-main-container{
  display: flex;
  flex-direction: column;
@@ -9,19 +16,57 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
     justify-content: center;
+    background-color: rgb(9, 9, 29);
+    margin: 0% 1%;
+    gap: 100px;
 }
 .about-photo{
    display: flex;
-   width: 70%;
-   margin: 5%;
+  
+   height: 25rem;
+ 
 
 }
 .about-text {
-    margin-top: .7rem; /* Equivalent to mt-4 in Tailwind CSS */
-    width: 100%; /* Equivalent to w-[90%] in Tailwind CSS */
-    text-align: center; /* Equivalent to text-center in Tailwind CSS */
+    margin: .7rem 0; /* Equivalent to mt-4 in Tailwind CSS */
+    width: 70%; /* Equivalent to w-[90%] in Tailwind CSS */
+    text-align: justify; /* Equivalent to text-center in Tailwind CSS */
     font-size: 1.125rem; /* Equivalent to text-lg in Tailwind CSS */
     font-weight: 500; /* Equivalent to font-bold in Tailwind CSS */
     color: #989999; /* Equivalent to text-richblack-300 in Tailwind CSS */
+}
+.about-teams{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-teams-heading{
+    text-align: center;
+    font-size: 2.5rem; /* Equivalent to text-4xl in Tailwind */
+    font-weight: 600; /* Equivalent to font-semibold in Tailwind */
+    margin: 1.75rem 0;
+
+}
+.team-member-card{
+    border: none;
+     margin: 2rem ;
+     border-radius: 3rem;
+     width: 18rem;
+    
+}
+.team-member-card:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    overflow: hidden;
+}
+.form-heading{
+    font-size: 3rem;
+    
+}
+.form-main{
+    box-shadow: 20px 20px 20px 20px rgba(0, 2, 4, 0.3);
+    margin: 3% 2%;
+    padding: 2% 5%;
 }

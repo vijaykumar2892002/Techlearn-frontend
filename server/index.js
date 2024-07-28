@@ -6,7 +6,7 @@ const userRoutes=require("./Routers/User")
 const courseRoutes=require("./Routers/Course")
 const paymentRoutes=require("./Routers/Payment")
 const profileRoutes=require("./Routers/Profile")
-
+const contactUsRoute = require("./Routers/Contact");
 const database = require("./Config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -44,7 +44,7 @@ app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/profile", profileRoutes);
 app.use("/api/v1/course", courseRoutes);
 app.use("/api/v1/payment", paymentRoutes);
-
+app.use("/api/v1/reach", contactUsRoute);
 
 //def route
 

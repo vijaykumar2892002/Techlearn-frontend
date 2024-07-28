@@ -1,0 +1,132 @@
+#profile-heading {
+    margin-bottom: 3.5rem;
+    font-size: 1.875rem;
+    font-weight: 500;
+    background: linear-gradient(to right, #f32170, #7fff08,#cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  #profile-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    border-radius: 0.375rem;
+    color: white;
+    border: 1px solid #334155;
+    background-color: #0F172A;
+  }
+  
+  #name {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 1rem;
+  }
+  
+  #profile-image {
+    width: 4.875rem;
+    height: 4.875rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  #name-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  #full-name {
+    font-size: 1rem;
+    font-weight: 600;
+    
+  }
+  
+  #email {
+    font-size: 0.875rem;
+    color: #9CA3AF;
+  }
+  
+  #about-container,
+  #personal-details-container {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 2rem 3rem;
+    border-radius: 0.375rem;
+    border: 1px solid #334155;
+    background-color: #0F172A;
+    color: white;
+  }
+  
+  #about-header,
+  #personal-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  #about-title,
+  #personal-details-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fcfcfc;
+  }
+  
+  #about-content {
+    font-size: 0.875rem;
+  }
+  
+  #personal-details-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 31.25rem;
+    color: white;
+  }
+  
+  #personal-details-left,
+  #personal-details-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  #first-name-label,
+  #email-label,
+  #gender-label,
+  #last-name-label,
+  #phone-number-label,
+  #date-of-birth-label {
+    font-size: 0.875rem;
+    color: #1078e0;
+    margin-bottom: 0.5rem;
+  }
+  
+  #first-name,
+  #email-value,
+  #gender,
+  #last-name,
+  #phone-number,
+  #date-of-birth {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #adafb0;
+  }
+  #logout-button {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    color: #4d4d4d;
+  }
+  
+  #logout-button #logout-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+   color: white;
+   margin: 15%;
+  }
+  
+  #logout-button #logout-icon {
+    font-size: 1.25rem; /* 20px */
+  }
