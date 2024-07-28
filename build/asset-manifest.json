@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2ece743a.css",
+    "main.js": "/static/js/main.fe165874.js",
+    "static/media/earth2.mp4": "/static/media/earth2.47052a076efc2d2bca73.mp4",
+    "static/media/banner3.mp4": "/static/media/banner3.2fde3fc31e3e846a99de.mp4",
+    "static/media/contactus.jpg": "/static/media/contactus.374d95c68f825a5114ac.jpg",
+    "static/media/aboutPhoto.jpg": "/static/media/aboutPhoto.5e17fa304c2e2ee56a03.jpg",
+    "static/media/earth.mp4": "/static/media/earth.e83147d6951b3faadae1.mp4",
+    "static/media/remote-teacher-video.jpg": "/static/media/remote-teacher-video.e9af345ca0d58067b40d.jpg",
+    "static/media/TechLearn_transparent.png": "/static/media/TechLearn_transparent.0e834c5b5983300623fd.png",
+    "static/media/Logo2.svg": "/static/media/Logo2.2d9e85de9e756cda89ffc4582338c939.svg",
+    "static/media/Logo1.svg": "/static/media/Logo1.73daf51e41d665299fc682bc3cb53878.svg",
+    "static/media/Logo3.svg": "/static/media/Logo3.0a56f78fead602f0d54c55ddcdf7e616.svg",
+    "static/media/Logo4.svg": "/static/media/Logo4.5da4c6e0c53e6745b25529891ef82458.svg",
+    "index.html": "/index.html",
+    "main.2ece743a.css.map": "/static/css/main.2ece743a.css.map",
+    "main.fe165874.js.map": "/static/js/main.fe165874.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ece743a.css",
+    "static/js/main.fe165874.js"
+  ]
+}
