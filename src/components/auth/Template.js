@@ -24,9 +24,9 @@ const Template = ({title,desc1,desc2,formtype,image,setisLoggedIn}) => {
       
       </div>
       
-      <button className='google-continue'>
+      {/* <button className='google-continue'>
       <FcGoogle></FcGoogle>
-      Sign Up with Google</button>
+      Sign Up with Google</button> */}
     </div>
     <div className='image1' >
     
