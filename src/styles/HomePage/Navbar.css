@@ -48,10 +48,7 @@
   }
 
 
-  /* catagories */
 
-  /* new-file.css */
-/* new-file.css */
 
 .dropdown-container {
   position: relative;
@@ -126,3 +123,53 @@
  
   color: white,
 }
+/* Add this for mobile button */
+.navbar-toggler {
+  display: none; /* Hide by default */
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .navList {
+    display: flex;
+    flex-direction: column; /* Makes the items vertical */
+    padding: 1rem;
+    gap: 1rem; /* Adds space between the items */
+  }
+  .navbar-toggler {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    left: 1rem; /* Move button to the left */
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hidden */
+    width: 180px;
+    height: max-content;
+    background-color: #001f3f;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav.open {
+    left: 0; /* Slide in when open */
+  }
+  
+}
+/* Default: Show logo in the navbar and hide it in the sidebar */
+.navbar-logo {
+  display: block;
+}
+
+.sidebar-logo {
+  display: none;
+}
+
+
